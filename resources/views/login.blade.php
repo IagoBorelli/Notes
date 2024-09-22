@@ -14,7 +14,8 @@
                     <!-- form -->
                     <div class="row justify-content-center">
                         <div class="col-md-10 col-12">
-                            <form action="#" method="post">
+                            <form action="/loginSubmit" method="post">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="text_username" class="form-label">Username</label>
                                     <input type="text" class="form-control bg-dark text-info" name="text_username"
