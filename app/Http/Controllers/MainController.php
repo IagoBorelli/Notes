@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Dotenv\Parser\Value;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
   public function index(){
+
+    $id = session('user.id');
+    $notes = User::find($id)->notes()->get()->toArray();
     
-    return view('home');
+    return view('home', ['notes'=> $notes]);
   }
 
   public function newNote(){
