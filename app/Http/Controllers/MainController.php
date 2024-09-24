@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
   public function index(){
-    echo "estou dentro do sistema";
+    
+    return view('home');
   }
 
   public function newNote(){
