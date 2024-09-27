@@ -127,9 +127,11 @@ class MainController extends Controller
 
         //$note->delete();
         
-        $note->deleted_at = date('Y-m-d H:i:s');
-        $note->save();
+        //$note->deleted_at = date('Y-m-d H:i:s');
+        //$note->save();
 
+
+        $note->delete();
 
         return redirect()->route('home');
     }
